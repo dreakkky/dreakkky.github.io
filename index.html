@@ -38,6 +38,9 @@
           padding-left: 30px;
           padding-right: 30px;
         }
+        .contact_icon {
+          width: 20px;
+        }
       }
 
       .header {
@@ -59,13 +62,21 @@
   </head>
   <body>
     <div class="about_me_header">
-      <p class="contact_information">612-478-9353</p>
-      <p class="contact_information">dilyanadobreva264@gmail.com</p>
+      <div class="phone_container">
+        <img class="contact_icon" src="images/phone-call.png" alt="" />
+        <span class="contact_information">612-478-9353</span>
+      </div>
+      <div class="email_container">
+        <img class="contact_icon" src="images/email.png" alt="" />
+        <span class="contact_information">dilyanadobreva264@gmail.com</span>
+      </div>
+
       <h1 class="name">Dilyana Dobreva</h1>
       <a href="https://github.com/dreakkky" target="_blank">
         <button class="github_button">GitHub</button>
       </a>
     </div>
+    <!-- add extra space between headers -->
     <p></p>
     <div class="header">
       <h1 class="projects">Projects</h1>
