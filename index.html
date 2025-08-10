@@ -5,82 +5,66 @@
     <title>Dilyana Dobreva's Portfolio Website</title>
     <style>
       body {
-        background-image: url("images/background.jpeg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-        background-attachment: fixed;
+        background-color: rgb(30, 30, 40);
+        margin: 0;
+        display: flex;
+        justify-content: center; /* Horizontal center */
+        align-items: center; /* Vertical center */
+        height: 100vh;
       }
-      .about_me_header {
+      .content {
+        color: aliceblue;
+        background: rgb(41, 41, 52);
         width: 90%;
-        padding: 50px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgba(236, 236, 236, 0.75);
-        color: rgb(25, 25, 25);
-        font-size: 30px;
-        border-radius: 10px;
-        font-family: "Open Sans", sans-serif;
-        letter-spacing: 10px;
-        .contact_information {
-          letter-spacing: 1px;
-          font-size: 10px;
-        }
-        .name {
-          width: 50%;
-        }
-        .github_button {
-          font-family: "Open Sans", sans-serif;
-          font-size: 20px;
-          border-radius: 10px;
-          border-style: none;
-          padding: 10px;
-          padding-left: 30px;
-          padding-right: 30px;
-        }
-        .contact_icon {
-          width: 20px;
-        }
+        height: 90%;
+        display: flex; /* This makes them side by side */
       }
-
-      .header {
-        width: 90%;
-        padding: 50px;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: rgba(198, 198, 198, 0.75);
-        color: rgb(25, 25, 25);
-        font-size: 30px;
-        border-radius: 10px;
-        font-family: "Open Sans", sans-serif;
-        letter-spacing: 10px;
-        .projects {
-          margin-top: 0%;
-        }
+      .profile-bar {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+      }
+      .profile {
+        height: 100px;
+        background-color: rgba(37, 37, 50, 0.98);
+      }
+      .profile-scroll-container {
+        height: 600px;
+        background-color: #212529;
+        overflow-y: scroll;
+      }
+      .social-medias {
+        height: 50px;
+        background-color: rgba(37, 37, 50, 0.98);
+      }
+      .info-bar {
+        flex-grow: 1; /* This allows info-bar to take the remaining space */
+        overflow-y: scroll;
       }
     </style>
   </head>
   <body>
-    <div class="about_me_header">
-      <div class="phone_container">
-        <img class="contact_icon" src="images/phone-call.png" alt="" />
-        <span class="contact_information">612-478-9353</span>
-      </div>
-      <div class="email_container">
-        <img class="contact_icon" src="images/email.png" alt="" />
-        <span class="contact_information">dilyanadobreva264@gmail.com</span>
+    <div class="content">
+      <div class="profile-bar">
+        <div class="profile">
+          <p>profile</p>
+        </div>
+        <div class="profile-scroll-container">
+          <p>
+            more informationmore informationmore informationmore informationmore
+            informationmore informationmore informationmore informationmore
+            informationmore informationmore informationmore informationmore
+            information
+          </p>
+        </div>
+        <div class="social-medias">
+          <p>social media</p>
+        </div>
       </div>
 
-      <h1 class="name">Dilyana Dobreva</h1>
-      <a href="https://github.com/dreakkky" target="_blank">
-        <button class="github_button">GitHub</button>
-      </a>
-    </div>
-    <!-- add extra space between headers -->
-    <p></p>
-    <div class="header">
-      <h1 class="projects">Projects</h1>
-      <a href="https://github.com/dreakkky" target="_blank"> </a>
+      <div class="info-bar">
+        <p>this is where i will put my projects and experience</p>
+      </div>
     </div>
   </body>
 </html>
