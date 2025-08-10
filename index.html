@@ -4,6 +4,42 @@
     <meta charset="UTF-8" />
     <title>Dilyana Dobreva's Portfolio Website</title>
     <style>
+      .preview-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgb(25, 25, 35);
+        color: #eef0f5;
+        padding: 10px 20px;
+        z-index: 999; /* Keeps it above all other content */
+        text-align: left;
+      }
+      h1 {
+        font-size: 48px;
+        margin: 0 0 10px 0;
+        font-weight: 600;
+        text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+      }
+      h2 {
+        margin: 5px 0;
+        font-size: 16px;
+      }
+      h3 {
+        font-size: 17px;
+      }
+      h4 {
+        margin: 10px 0 0 0;
+      }
+      h5 {
+        color: #a0a0a0;
+        margin: 0 0 10px 0;
+      }
+      p {
+        margin: 2px 0;
+        color: #a0a0a0;
+        font-size: 13px;
+      }
       body {
         font-family: "Poppins", sans-serif;
         background-color: rgb(30, 30, 40);
@@ -41,15 +77,6 @@
         object-fit: cover;
         border-radius: 50%;
       }
-      .name {
-        margin: 5px 0;
-        font-size: 16px;
-      }
-      .profile-text {
-        margin: 2px 0;
-        color: #a0a0a0;
-        font-size: 13px;
-      }
       .profile-scroll-container {
         padding: 15px;
         background-color: rgb(30, 28, 38);
@@ -74,6 +101,7 @@
         padding: 60px;
         height: 200px;
         border-radius: 12px;
+        /* REMOVE AND FIX THISSSSS*/
         /* 80% opacity effect on background image without affecting text */
         background: linear-gradient(
             rgba(30, 30, 40, 0.2),
@@ -86,15 +114,9 @@
         justify-content: center;
       }
 
-      .hello-world {
-        font-size: 48px;
-        margin: 0 0 10px 0;
-        font-weight: 600;
-        text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
-      }
       .github-button {
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-        background-color: orange; /* Green */
+        background-color: orange;
         color: white;
         padding: 15px 30px;
         border: none;
@@ -104,10 +126,50 @@
       }
 
       .github-button:hover {
+        transform: translateY(-3px);
+        background-color: darkgoldenrod; /* Darker green on hover */
+      }
+      .project {
+        height: 200px;
+        display: flex;
+        margin: auto;
+        width: 90%;
+        background-color: rgba(37, 37, 50, 0.98);
+      }
+      .icon {
+        width: 20px;
+      }
+      .project-info {
+        padding: 10px;
+        flex-direction: column;
+        width: 50%;
+      }
+      .project-image {
+        margin-left: auto;
+        object-fit: contain;
+        height: 200px;
+      }
+      .view-project-button {
+        margin: 20px 0 20px 0;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        background-color: orange;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+      }
+
+      .view-project-button:hover {
+        transform: translateY(-3px);
         background-color: darkgoldenrod; /* Darker green on hover */
       }
 
       .typing {
+        margin-bottom: 10px;
+        height: 23px;
+        position: relative;
         white-space: nowrap;
         overflow: hidden;
         border-right: 3px solid orange; /* caret */
@@ -141,15 +203,18 @@
     </style>
   </head>
   <body>
+    <div class="preview-header">
+      <p>Last Updated: 8/10/2025</p>
+    </div>
     <div class="content">
       <div class="profile-bar">
         <div class="profile">
           <div class="profile-picture">
             <img src="images/profile-picture.png" alt="profile picture" />
           </div>
-          <h1 class="name">Dilyana Dobreva</h1>
-          <p class="profile-text">Undergraduate Student</p>
-          <p class="profile-text">Texas A&M University</p>
+          <h2>Dilyana Dobreva</h2>
+          <p>Undergraduate Student</p>
+          <p>Texas A&M University</p>
         </div>
         <div class="profile-scroll-container"></div>
         <div class="social-medias">
@@ -159,7 +224,7 @@
 
       <div class="info-bar">
         <div class="info-bar-banner">
-          <h1 class="hello-world">Welcome to my Portfolio!</h1>
+          <h1>Welcome to my Portfolio!</h1>
           <div class="typing">System.out.print(Hello World!);</div>
           <div>
             <a href="https://github.com/dreakkky" target="_blank">
@@ -167,7 +232,47 @@
             </a>
           </div>
         </div>
+        <div class="info-bar-projects">
+          <h3>My Projects</h3>
+          <div class="project">
+            <div class="project-info">
+              <h4>
+                ML Model Cancer
+                <img
+                  class="icon"
+                  src="images/python-icon.png"
+                  alt="python icon"
+                />
+                <img class="icon" src="images/ai-icon.png" alt="AI icon" />
+              </h4>
+              <h5>2025</h5>
+              <p>
+                Replicated, trained, and optimized an ML model to predict cancer
+                based on lab results. Uses multiple data sets to train models
+                and evaluate the model performance. Tuned the model to achieve
+                higher prediction accuracy. Programming language used: Python, a
+                classification ML model.
+              </p>
+
+              <div>
+                <a
+                  href="https://www.kaggle.com/code/dilyana264/breast-cancer-prediction-model"
+                  target="_blank"
+                >
+                  <button class="view-project-button">View Project</button>
+                </a>
+              </div>
+            </div>
+            <img
+              class="project-image"
+              src="images/ml-project-image.png"
+              alt="image of project"
+            />
+          </div>
+        </div>
+        <div class="info-bar-certifications"></div>
       </div>
     </div>
   </body>
 </html>
+<!--scrollbar-width: none;-->
