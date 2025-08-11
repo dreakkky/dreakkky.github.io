@@ -11,7 +11,7 @@
         background-color: rgb(25, 25, 35);
         color: #eef0f5;
         padding: 10px 20px;
-        z-index: 999; /* Keeps it above all other content */
+        z-index: 999;
         text-align: left;
       }
       h1 {
@@ -100,14 +100,13 @@
         padding: 60px;
         height: 200px;
         border-radius: 12px;
-        /* REMOVE AND FIX THISSSSS*/
-        /* 80% opacity effect on background image without affecting text */
+
         background: linear-gradient(
             rgba(30, 30, 40, 0.2),
             rgba(30, 30, 40, 0.2)
           ),
           url("images/earth.jpg") center/cover no-repeat;
-        color: #eee; /* make sure text stands out */
+        color: #eee;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -121,16 +120,16 @@
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        transition: background-color 0.3s ease;
       }
 
       .github-button:hover {
         transform: translateY(-3px);
-        background-color: darkgoldenrod; /* Darker green on hover */
+        background-color: darkgoldenrod;
       }
       .project {
         margin: 0px auto 20px auto;
-        height: 200px;
+        height: auto;
         display: flex;
         width: 90%;
         background-color: rgba(37, 37, 50, 0.98);
@@ -157,12 +156,12 @@
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        transition: background-color 0.3s ease; /* Smooth transition for background color */
+        transition: background-color 0.3s ease;
       }
 
       .view-project-button:hover {
         transform: translateY(-3px);
-        background-color: darkgoldenrod; /* Darker green on hover */
+        background-color: darkgoldenrod;
       }
 
       .typing {
@@ -171,7 +170,7 @@
         position: relative;
         white-space: nowrap;
         overflow: hidden;
-        border-right: 3px solid orange; /* caret */
+        border-right: 3px solid orange;
         width: 0;
         animation: typing 4s steps(35) forwards,
           blinkCaret 0.75s step-end 5 forwards;
@@ -186,17 +185,17 @@
           width: 0;
         }
         to {
-          width: 35ch; /* matches characters in your text */
+          width: 35ch;
         }
       }
 
       @keyframes blinkCaret {
         0%,
         100% {
-          border-color: transparent; /* cursor hidden */
+          border-color: transparent;
         }
         50% {
-          border-color: orange; /* cursor visible */
+          border-color: orange;
         }
       }
     </style>
