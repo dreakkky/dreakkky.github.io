@@ -82,12 +82,9 @@
         flex-grow: 1;
         overflow-y: auto;
       }
-      .social-medias {
-        height: 50px;
-        background-color: rgba(37, 37, 50, 0.98);
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      .contact-information {
+        padding: 10px;
+        text-align: center;
       }
       .info-bar {
         background-color: rgb(30, 29, 40);
@@ -142,6 +139,8 @@
         flex-direction: column;
         width: 50%;
       }
+      /*MAKE IT SO THAT THE IMAGE HEIGHT INCREASES
+      WHEN THE DIV CLASS HEIGHT ALSO INCLEASES*/
       .project-image {
         margin-left: auto;
         object-fit: contain;
@@ -162,6 +161,11 @@
       .view-project-button:hover {
         transform: translateY(-3px);
         background-color: darkgoldenrod;
+      }
+
+      .info-bar-certifications img{
+        height: 10px;
+        height: 200px;
       }
 
       .typing {
@@ -218,8 +222,9 @@
           <p>Texas A&M University</p>
         </div>
         <div class="profile-scroll-container"></div>
-        <div class="social-medias">
-          <p>Contact Information</p>
+        <div class="contact-information">
+          <p>612-478-9353</p>
+          <p>dilyanadobreva264@gmail.com</p>
         </div>
       </div>
       <!--the info bar contains projects certificats and orther achivemnets-->
@@ -381,7 +386,10 @@
             />
           </div>
         </div>
-        <div class="info-bar-certifications"></div>
+        <div class="info-bar-certifications">
+          <h3>My Certifications</h3>
+            <img src="images/certification-java.png" alt="java certification">
+            <img src="images/certification-python.png" alt="python certification">
       </div>
     </div>
   </body>
