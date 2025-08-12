@@ -108,7 +108,7 @@ body {
   border-radius: 12px;
 
   background: linear-gradient(rgba(30, 30, 40, 0.2), rgba(30, 30, 40, 0.2)),
-    url("images/earth.jpg") center/cover no-repeat;
+    url("assets/images/earth.jpg") center/cover no-repeat;
   color: #eee;
   display: flex;
   flex-direction: column;
