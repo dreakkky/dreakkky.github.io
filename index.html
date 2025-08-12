@@ -3,36 +3,44 @@
   <head>
     <title>Dilyana Dobreva's Portfolio Website</title>
     <style>
-      .preview-header {
-        position: fixed;
+      .main {
+        display: flex;
+        flex-direction: column;
+        height: 100%; /* full height of its parent */
+      }
+      .header {/*add menu and high school achivements tab*/
+        /*position: fixed;*/
         top: 0;
         left: 0;
         width: 100%;
         background-color: rgb(25, 25, 35);
-        color: #eef0f5;
-        padding: 10px 20px;
+        padding: 5px 20px;
         z-index: 999;
-        text-align: left;
+        text-align: left;/*fix this*/
+        flex-shrink: 0;
+        box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.6);
       }
-      h1 {
+      h1 {/*very big font*/
         font-size: 48px;
+        font-weight: 800;
         margin: 0 0 10px 0;
         font-weight: 600;
         text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
       }
-      h2 {
-        margin: 5px 0;
+      h2 {/*my projects .....*/
+        font-weight: 600;
+        margin: 17px 0;
         font-size: 16px;
       }
-      h3 {
-        font-size: 17px;
+      h3 {/*name & project names*/
+        font-size: 15px;
+        font-weight: 600;
+        margin: 10px 0;
       }
-      h4 {
-        margin: 10px 0 0 0;
-      }
-      h5 {
-        color: #a0a0a0;
-        margin: 0 0 10px 0;
+      h4 {/*main text from side prof & year for projects*/
+        margin: 10px 0;
+        font-size: 13px;
+        font-weight: 400;
       }
       p {
         margin: 2px 0;
@@ -48,7 +56,7 @@
         align-items: center; /* Center vertically */
         height: 100vh;
       }
-      .content {
+      .page {
         color: aliceblue;
         background: rgb(41, 41, 52);
         width: 90%;
@@ -58,42 +66,41 @@
         overflow: hidden;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
       }
-      .profile-bar {
+      .side-page {
         width: 290px;
         display: flex;
         flex-direction: column;
       }
-      .profile {
+      .side-page-profile {
         padding: 30px;
         background-color: rgba(37, 37, 50, 0.98);
         text-align: center;
       }
-      .profile-picture img {
+      .side-page-profile-picture img {
         box-shadow: 0 0 3px aliceblue;
-        margin-bottom: 15px;
         width: 90px;
         height: 90px;
         object-fit: cover;
         border-radius: 50%;
       }
-      .profile-scroll-container {
-        padding: 15px;
+      .side-page-scroll-container {
+        padding: 15px 15px 90px 15px;
         background-color: rgb(30, 28, 38);
         flex-grow: 1;
         overflow-y: auto;
       }
-      .contact-information {
+      .side-page-contact-information {
         padding: 10px;
         text-align: center;
       }
-      .info-bar {
+      .main-page {
         background-color: rgb(30, 29, 40);
         flex-grow: 1;
         overflow-y: auto;
         padding: 20px;
       }
 
-      .info-bar-banner {
+      .main-page-banner {
         padding: 60px;
         height: 200px;
         border-radius: 12px;
@@ -109,7 +116,7 @@
         justify-content: center;
       }
 
-      .github-button {
+      .main-page-banner-github-button {
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
         background-color: orange;
         color: white;
@@ -120,7 +127,7 @@
         transition: background-color 0.3s ease;
       }
 
-      .github-button:hover {
+      .main-page-banner-github-button:hover {
         transform: translateY(-3px);
         background-color: darkgoldenrod;
       }
@@ -168,7 +175,7 @@
         height: 200px;
       }
 
-      .typing {
+      .main-page-banner-typing-effect {
         margin-bottom: 10px;
         height: 23px;
         position: relative;
@@ -182,6 +189,13 @@
         font-size: 20px;
         color: orange;
         text-shadow: 0 0 4px rgba(255, 165, 0, 0.6);
+      }
+      .side-page-scroll-container-information{
+        padding: 0 0 15px 0;
+        border-style:solid;
+        border-width: 0 0 0.5px;
+        border-color: #6f6f70;
+        border-
       }
 
       @keyframes typing {
@@ -205,45 +219,51 @@
     </style>
   </head>
   <body>
-    <!--preview-header-->
-    <div class="preview-header">
-      <p>Last Updated: 8/10/2025</p>
-    </div>
-    <!--content contains all components-->
-    <div class="content">
+    <!--page class contains all components-->
+    <div class="page">
       <!--the profile bar is the most left bar, which contains information about the profile-->
-      <div class="profile-bar">
-        <div class="profile">
-          <div class="profile-picture">
+      <div class="side-page">
+        <div class="side-page-profile">
+          <div class="side-page-profile-picture">
             <img src="images/profile-picture.png" alt="profile picture" />
           </div>
-          <h2>Dilyana Dobreva</h2>
+          <h3>Dilyana Dobreva</h3>
           <p>Undergraduate Student</p>
           <p>Texas A&M University</p>
         </div>
-        <div class="profile-scroll-container"></div>
-        <div class="contact-information">
+        <div class="side-page-scroll-container">
+          <div class="side-page-scroll-container-information">
+            <h3>About Me</h3>
+            <h4>I'm a hardworking individual seeking internship opportunities to program impactful projects.</h4>
+          </div>
+        </div>
+        <div class="side-page-contact-information">
           <p>612-478-9353</p>
           <p>dilyanadobreva264@gmail.com</p>
         </div>
       </div>
       <!--the info bar contains projects certificats and orther achivemnets-->
-      <div class="info-bar">
-        <div class="info-bar-banner">
+      <div class="main">
+      <div class="header">
+        <h4>Last Updated: 8/10/2025</h4>
+      </div>
+      <div class="main-page">
+        
+        <div class="main-page-banner">
           <h1>Welcome to my Portfolio!</h1>
-          <div class="typing">System.out.print(Hello World!);</div>
+          <div class="main-page-banner-typing-effect">System.out.print(Hello World!);</div>
           <div>
             <a href="https://github.com/dreakkky" target="_blank">
-              <button class="github-button">My GitHub</button>
+              <button class="main-page-banner-github-button">My GitHub</button>
             </a>
           </div>
         </div>
-        <div class="info-bar-projects">
-          <h3>My Projects</h3>
+        <div class="main-page-projects">
+          <h2>My Projects</h2>
           <!--ML cancer project-->
           <div class="project">
             <div class="project-info">
-              <h4>
+              <h3>
                 ML Model Cancer
                 <img
                   class="icon"
@@ -251,8 +271,8 @@
                   alt="python icon"
                 />
                 <img class="icon" src="images/ai-icon.png" alt="AI icon" />
-              </h4>
-              <h5>2025</h5>
+              </h3>
+              <h4>2025</h4>
               <p>
                 Replicated, trained, and optimized an ML model to predict cancer
                 based on lab results. Uses multiple data sets to train models
@@ -279,7 +299,7 @@
           <!--ball roller game project -->
           <div class="project">
             <div class="project-info">
-              <h4>
+              <h3>
                 3D Ball Roller Game
                 <img
                   class="icon"
@@ -287,8 +307,8 @@
                   alt="Unity icon"
                 />
                 <img class="icon" src="images/c-sharp-icon.png" alt="C# icon" />
-              </h4>
-              <h5>2025</h5>
+              </h3>
+              <h4>2025</h4>
               <p>
                 I built an animated game using C#, in Unity, highly optimized
                 for performance and graphics rendering, using multiple levels of
@@ -315,7 +335,7 @@
           <!--minesweeper game project -->
           <div class="project">
             <div class="project-info">
-              <h4>
+              <h3>
                 Minesweeper Game
                 <img
                   class="icon"
@@ -323,8 +343,8 @@
                   alt="Intellij icon"
                 />
                 <img class="icon" src="images/java-icon.png" alt="Java icon" />
-              </h4>
-              <h5>2023</h5>
+              </h3>
+              <h4>2023</h4>
               <p>
                 I built a user interface program using Java Swing, an API for
                 graphical user interfaces, object-oriented classes, and
@@ -351,7 +371,7 @@
           <!--yahtzee game project -->
           <div class="project">
             <div class="project-info">
-              <h4>
+              <h3>
                 Yahtzee Game
                 <img
                   class="icon"
@@ -359,8 +379,8 @@
                   alt="Intellij icon"
                 />
                 <img class="icon" src="images/java-icon.png" alt="Java icon" />
-              </h4>
-              <h5>2023</h5>
+              </h3>
+              <h4>2023</h4>
               <p>
                 I built a user interface program using Java, specifically Java
                 Swing—an API for graphical user interfaces and object-oriented
@@ -387,9 +407,10 @@
           </div>
         </div>
         <div class="info-bar-certifications">
-          <h3>My Certifications</h3>
+          <h2>My Certifications</h2>
             <img src="images/certification-java.png" alt="java certification">
             <img src="images/certification-python.png" alt="python certification">
+      </div>
       </div>
     </div>
   </body>
