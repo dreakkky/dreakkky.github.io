@@ -42,7 +42,7 @@ h4 {
   /*main text from side prof & year for projects*/
   margin: 10px 0;
   font-size: 13px;
-  font-weight: 400;
+  font-weight: 550;
 }
 p {
   margin: 2px 0;
@@ -169,9 +169,137 @@ body {
   background-color: darkgoldenrod;
 }
 
+.info-bar-certifications {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
 .info-bar-certifications img {
   height: 10px;
   height: 200px;
+}
+
+.side-page-scroll-container-information {
+  margin: 0 0 11px 0;
+  padding: 0 0 15px 0;
+  border-style: solid;
+  border-width: 0 0 0.5px;
+  border-color: #6f6f70;
+}
+.language-container {
+  display: flex;
+  gap: 20px; /* space between languages */
+  justify-content: center; /* center all items horizontally */
+  align-items: flex-start; /* align tops of the circles */
+}
+.language {
+  align-items: center;
+  margin: 20px 0;
+}
+.outer-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: conic-gradient(orange var(--percent), rgb(25, 25, 35) 0%);
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 6px 6px 12px -1px rgba(0, 0, 0, 0.2);
+}
+
+#percent-bg {
+  --percent: 75%;
+}
+
+#percent-eg {
+  --percent: 100%;
+}
+.inner-circle {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: rgb(25, 25, 35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: inset 4px 4px 8px -1px rgba(0, 0, 0, 0.5),
+    inset -4px -4px 8px -1px rgba(255, 255, 255, 0.1);
+}
+.programing-language-text {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.outer-bar {
+  width: 100%;
+  height: 10px;
+  background-color: rgb(25, 25, 35);
+  box-shadow: 4px 4px 8px -1px rgba(0, 0, 0, 0.7);
+}
+.inner-bar {
+  width: var(--percent);
+  height: 10px;
+  background-color: orange;
+}
+#java {
+  --percent: 90%;
+}
+#c-sharp {
+  --percent: 80%;
+}
+#python {
+  --percent: 20%;
+}
+#html-css {
+  --percent: 20%;
+}
+
+.skills {
+  border-radius: 15px;
+  padding: 15px 20px;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 550;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills li {
+  margin: 8px 0;
+  position: relative;
+  padding-left: 25px;
+}
+
+.skills li::before {
+  content: "✔";
+  color: #f7b731; /* Yellow checkmark */
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.resume-link {
+  font-weight: 550;
+  text-decoration: none;
+  padding: 17px 0;
+  font-size: 16px;
+  color: #a0a0a0;
+  text-shadow: #ffffff 0px;
+  transition: text-shadow 0.3s ease;
+  transition: color 0.5s ease;
+}
+.resume-link:hover {
+  transform: translateY(-3px);
+  color: rgb(255, 255, 255);
+  text-shadow: #ffffff 0px 0px 1px;
 }
 
 .main-page-banner-typing-effect {
@@ -187,12 +315,6 @@ body {
   font-size: 20px;
   color: orange;
   text-shadow: 0 0 4px rgba(255, 165, 0, 0.6);
-}
-.side-page-scroll-container-information {
-  padding: 0 0 15px 0;
-  border-style: solid;
-  border-width: 0 0 0.5px;
-  border-color: #6f6f70;
 }
 
 @keyframes typing {
